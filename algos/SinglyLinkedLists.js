@@ -60,6 +60,8 @@ class SinglyLinkedList {
      * @returns {SinglyLinkedList} This list.
      */
     insertAtBack(data) {
+        let newNode = new ListNode(data);
+        let runner = this.head;
         //your code here
     }
 
