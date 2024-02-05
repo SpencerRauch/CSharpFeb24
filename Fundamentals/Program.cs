@@ -48,3 +48,22 @@ foreach (KeyValuePair<string,int> entry in PetAges)
 {
     Console.WriteLine($"key is {entry.Key} value is {entry.Value}");
 }
+
+        //return type
+static void SayHello()
+{
+    Console.WriteLine("Hello how are you doing today?");
+}
+
+// string HelloMessage = SayHello(); // compiler doesn't like this, can't convert void to string
+
+static int MathingTheMath(int numA, int numB = 5)
+{
+    // Console.WriteLine($"It's going to return {numA * numB}");
+    return numA * numB;
+}
+
+
+
+SayHello();
+System.Console.WriteLine(MathingTheMath(4));
