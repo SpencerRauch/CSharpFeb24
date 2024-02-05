@@ -48,7 +48,7 @@ class SinglyLinkedList {
      * @returns {boolean}
      */
     isEmpty() {
-        //your code here
+        return this.head === null;
     }
 
     /**
