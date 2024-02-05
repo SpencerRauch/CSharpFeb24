@@ -66,4 +66,6 @@ static int MathingTheMath(int numA, int numB = 5)
 
 
 SayHello();
-System.Console.WriteLine(MathingTheMath(4));
+Console.WriteLine("Hello");
+Console.WriteLine("party");
+
