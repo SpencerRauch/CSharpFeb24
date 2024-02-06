@@ -1,0 +1,15 @@
+C:\dojofiles\Feb24\Interfaces\bin\Debug\net8.0\Interfaces.exe
+C:\dojofiles\Feb24\Interfaces\bin\Debug\net8.0\Interfaces.deps.json
+C:\dojofiles\Feb24\Interfaces\bin\Debug\net8.0\Interfaces.runtimeconfig.json
+C:\dojofiles\Feb24\Interfaces\bin\Debug\net8.0\Interfaces.dll
+C:\dojofiles\Feb24\Interfaces\bin\Debug\net8.0\Interfaces.pdb
+C:\dojofiles\Feb24\Interfaces\obj\Debug\net8.0\Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\dojofiles\Feb24\Interfaces\obj\Debug\net8.0\Interfaces.AssemblyInfoInputs.cache
+C:\dojofiles\Feb24\Interfaces\obj\Debug\net8.0\Interfaces.AssemblyInfo.cs
+C:\dojofiles\Feb24\Interfaces\obj\Debug\net8.0\Interfaces.csproj.CoreCompileInputs.cache
+C:\dojofiles\Feb24\Interfaces\obj\Debug\net8.0\Interfaces.sourcelink.json
+C:\dojofiles\Feb24\Interfaces\obj\Debug\net8.0\Interfaces.dll
+C:\dojofiles\Feb24\Interfaces\obj\Debug\net8.0\refint\Interfaces.dll
+C:\dojofiles\Feb24\Interfaces\obj\Debug\net8.0\Interfaces.pdb
+C:\dojofiles\Feb24\Interfaces\obj\Debug\net8.0\Interfaces.genruntimeconfig.cache
+C:\dojofiles\Feb24\Interfaces\obj\Debug\net8.0\ref\Interfaces.dll
