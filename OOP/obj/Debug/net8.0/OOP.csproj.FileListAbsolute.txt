@@ -1,0 +1,15 @@
+C:\dojofiles\Feb24\OOP\bin\Debug\net8.0\OOP.exe
+C:\dojofiles\Feb24\OOP\bin\Debug\net8.0\OOP.deps.json
+C:\dojofiles\Feb24\OOP\bin\Debug\net8.0\OOP.runtimeconfig.json
+C:\dojofiles\Feb24\OOP\bin\Debug\net8.0\OOP.dll
+C:\dojofiles\Feb24\OOP\bin\Debug\net8.0\OOP.pdb
+C:\dojofiles\Feb24\OOP\obj\Debug\net8.0\OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\dojofiles\Feb24\OOP\obj\Debug\net8.0\OOP.AssemblyInfoInputs.cache
+C:\dojofiles\Feb24\OOP\obj\Debug\net8.0\OOP.AssemblyInfo.cs
+C:\dojofiles\Feb24\OOP\obj\Debug\net8.0\OOP.csproj.CoreCompileInputs.cache
+C:\dojofiles\Feb24\OOP\obj\Debug\net8.0\OOP.sourcelink.json
+C:\dojofiles\Feb24\OOP\obj\Debug\net8.0\OOP.dll
+C:\dojofiles\Feb24\OOP\obj\Debug\net8.0\refint\OOP.dll
+C:\dojofiles\Feb24\OOP\obj\Debug\net8.0\OOP.pdb
+C:\dojofiles\Feb24\OOP\obj\Debug\net8.0\OOP.genruntimeconfig.cache
+C:\dojofiles\Feb24\OOP\obj\Debug\net8.0\ref\OOP.dll
