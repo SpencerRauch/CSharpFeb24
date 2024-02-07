@@ -37,7 +37,7 @@ class SinglyLinkedList {
      *    returned without having to explicitly write "return".
      */
     constructor() {
-      /** @type {ListNode|null} */
+        /** @type {ListNode|null} */
         this.head = null;
     }
 
@@ -85,11 +85,11 @@ class SinglyLinkedList {
      */
     insertAtBackRecursive(data, runner = this.head) {
         //your code here
-        if (this.isEmpty()){
+        if (this.isEmpty()) {
             this.head = new ListNode(data);
             return this;
         }
-        if (runner.next === null){
+        if (runner.next === null) {
             runner.next = new ListNode(data);
             return this;
         }
@@ -105,7 +105,7 @@ class SinglyLinkedList {
      */
     insertAtBackMany(vals) {
         for (const item of vals) {
-                this.insertAtBack(item);
+            this.insertAtBack(item);
         }
         return this;
     }
@@ -128,7 +128,7 @@ class SinglyLinkedList {
         return arr;
     }
 
-    
+
     /**
      * Creates a new node with the given data and inserts that node at the front
      * of this list.
@@ -139,6 +139,10 @@ class SinglyLinkedList {
      */
     insertAtFront(data) {
         //your code here
+        let newHead = new ListNode(data);
+        newHead.next = this.head;
+        this.head = newHead;
+        return this;
     }
 
     /**
@@ -149,6 +153,44 @@ class SinglyLinkedList {
      */
     removeHead() {
         //your code here
+        if (this.isEmpty()) return null;
+        let removed = this.head;
+        this.head = this.head.next;
+        return removed.data;
+    }
+
+    /**
+    * Removes the last node of this list.
+    * - Time: O(?).
+    * - Space: O(?).
+    * @returns {any} The data from the node that was removed or null if no nodes were removed.
+    */
+    removeBack() {
+        //Your code here
+    }
+
+    /**
+     * Determines whether or not the given search value exists in this list iteratively.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} val The data to search for in the nodes of this list.
+     * @returns {boolean}
+     */
+    contains(val) {
+        //your code here
+    }
+
+    /**
+     * Determines whether or not the given search value exists in this list recursively.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {any} val The data to search for in the nodes of this list.
+     * @param {?ListNode} current The current node during the traversal of this list
+     *    or null when the end of the list has been reached.
+     * @returns {boolean}
+     */
+    containsRecursive(val, current = this.head) {
+        //Your code here
     }
 
 }
@@ -165,5 +207,5 @@ const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
 const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
 const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
 const unorderedList = new SinglyLinkedList().insertAtBackMany([
--5, -10, 4, -3, 6, 1, -7, -2,
+    -5, -10, 4, -3, 6, 1, -7, -2,
 ]);
