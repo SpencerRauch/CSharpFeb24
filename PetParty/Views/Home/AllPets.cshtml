@@ -1,0 +1,15 @@
+@{
+    ViewData["Title"] = "All Pets";
+    @* Layout = "_BareBones"; *@
+}
+
+@model List<Pet>
+
+<h1>All the Pets in the Db!</h1>
+
+@foreach (Pet p in Model)
+{
+    <p>@p.Name is a @p.Age years old @p.Species @(p.IsCute ? "they are cute" : "they are rugged") </p>
+}
+
+<a asp-action="Index" asp-controller="Home" class="btn btn-primary">Go Home</a>
