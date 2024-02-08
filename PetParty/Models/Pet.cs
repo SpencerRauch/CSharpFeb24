@@ -6,12 +6,14 @@ namespace PetParty.Models;
 public class Pet
 {
     [Required]
+    [NoZNames]
     // [DataType(DataType.Password)]
     // [DataType(DataType.Date)] // do this if you don't want your datetime to track time
     public string Name { get;set; }
 
     [Display(Name = "Type of Pet")]
     [Required]
+    [ProvidedOptions("Dog","Fish","Cat","Zebra")]
     public string Species { get;set; }
 
     [Required(ErrorMessage = "Please supply age")]
@@ -21,3 +23,4 @@ public class Pet
     public bool IsCute { get;set; }
 
 }
+
