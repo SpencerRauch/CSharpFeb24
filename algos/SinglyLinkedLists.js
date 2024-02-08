@@ -167,6 +167,23 @@ class SinglyLinkedList {
     */
     removeBack() {
         //Your code here
+        if (this.isEmpty()) {
+            return null;
+        }
+
+        // only one node, remove the head
+        if (this.head.next === null) {
+            return this.removeHead();
+        }
+        //more than one node, move to one before the end
+        let runner = this.head;
+        while (runner.next.next) {
+            runner = runner.next;
+        }
+
+        const removedData = runner.next.data;
+        runner.next = null;
+        return removedData;
     }
 
     /**
@@ -178,6 +195,12 @@ class SinglyLinkedList {
      */
     contains(val) {
         //your code here
+        let runner = this.head;
+        while (runner) {
+            if (runner.data === val) return true;
+            runner = runner.next;
+        }
+        return false;
     }
 
     /**
@@ -191,6 +214,9 @@ class SinglyLinkedList {
      */
     containsRecursive(val, current = this.head) {
         //Your code here
+        if (!current) return false;
+        if (current.data === val) return true;
+        return this.containsRecursive(val, current.next);
     }
 
 }
