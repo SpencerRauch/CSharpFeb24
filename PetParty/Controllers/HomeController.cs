@@ -36,6 +36,8 @@ public class HomeController : Controller
             return View("Index");
         }
         FakePetDb.Add(newPet);
+        HttpContext.Session.SetString("LastPet", newPet.Name);
+
         // FakePetDb.SaveChanges();
         Console.WriteLine($"{newPet.Name} is a {newPet.Age} year(s) old {newPet.Species} {(newPet.IsCute ? "they are cute" : "they are rugged")}");
         return RedirectToAction("AllPets");
@@ -45,7 +47,27 @@ public class HomeController : Controller
     public IActionResult AllPets()
     {
         // ViewBag.AllPets = FakePetDb;
+        // string? LastPet = HttpContext.Session.GetString("LastPet");
+        if (HttpContext.Session.GetString("LastPet") == null)
+        {
+            return RedirectToAction("Index");
+        }
         return View(FakePetDb);
+    }
+
+    [HttpPost("pets/limit")]
+    public RedirectToActionResult SetFilter(int Limit)
+    {
+        HttpContext.Session.SetInt32("Limit", Limit);
+        return RedirectToAction("AllPets");
+    }
+
+    [HttpPost("pets/limit/clear")]
+    public RedirectToActionResult ClearFilter()
+    {
+        // HttpContext.Session.Clear(); //this will remove EVERYTHING from session
+        HttpContext.Session.Remove("Limit");
+        return RedirectToAction("AllPets");
     }
 
     public IActionResult Privacy()

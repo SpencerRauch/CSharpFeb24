@@ -1,15 +1,29 @@
 @{
     ViewData["Title"] = "All Pets";
+    int? Limit = Context.Session.GetInt32("Limit");
+    bool Filtered = Limit != null;
     @* Layout = "_BareBones"; *@
 }
 
 @model List<Pet>
 
+<div class="text-center">
 <h1>All the Pets in the Db!</h1>
+    <form asp-action="SetFilter" asp-controller="Home" method="Post">
+        <input type="number" name="Limit" value="@Limit">
+        <button class="btn btn-primary">Filter Age</button>
+    </form>
+    <form asp-action="ClearFilter" asp-controller="Home" method="Post">
+        <button class="btn btn-danger">Clear</button>
+    </form>
+</div>
 
 @foreach (Pet p in Model)
 {
-    <p>@p.Name is a @p.Age years old @p.Species @(p.IsCute ? "they are cute" : "they are rugged") </p>
+    if (!Filtered || p.Age >= Limit)
+    {
+        <p>@p.Name is a @p.Age years old @p.Species @(p.IsCute ? "they are cute" : "they are rugged") </p>
+    }
 }
 
 <a asp-action="Index" asp-controller="Home" class="btn btn-primary">Go Home</a>
