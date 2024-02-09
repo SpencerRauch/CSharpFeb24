@@ -271,6 +271,18 @@ class SinglyLinkedList {
         return false;
     }
 
+    /**
+     * Concatenates the nodes of a given list onto the back of this list.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {SinglyLinkedList} addList An instance of a different list whose
+     *    whose nodes will be added to the back of this list.
+     * @returns {SinglyLinkedList} This list with the added nodes.
+    */
+        concat(addList) {
+            //your code here
+        }
+
 
 }
 
@@ -287,4 +299,8 @@ const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
 const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
 const unorderedList = new SinglyLinkedList().insertAtBackMany([
     -5, -10, 4, -3, 6, 1, -7, -2,
-]);
+]);+
+
+// Test case for concat
+firstThreeList.concat(secondThreeList);
+console.log(firstThreeList.toArr(), "should be", "[1, 2, 3, 4, 5, 6]")
