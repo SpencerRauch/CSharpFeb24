@@ -1,4 +1,5 @@
-﻿List<VideoGame> Games = new()
+﻿
+List<VideoGame> Games = new()
 {
     new VideoGame("Apex Legends", "Riot", "E", 0, "Xbox, PC"),
     new VideoGame("The Last of Us", "Naughty Dog", "M", 39.99, "PlayStation"),
@@ -22,14 +23,42 @@
 
 
 // Getting a single result based on criteria
+// VideoGame EldenRing = Games.First( g => g.Title == "Eldne Ring"); // using first will throw a runtime error if no matches found
 
-// Getting multiple results based on criteria
+// VideoGame? EldenRing = Games.FirstOrDefault(g => g.Title.Contains("Elden"));
+// if (EldenRing == null)
+// {
+//     Console.WriteLine("Not Found");
+// }
+// else 
+// {
+//     Console.WriteLine(EldenRing);
+// }
 
-// Getting select pieces of data
+
+
+
+// // Getting multiple results based on criteria
+// List<VideoGame> Affordable = Games.Where(game => game.Price < 30.00).ToList();
+// // Affordable.ForEach(Console.WriteLine);
+
+// // Getting select pieces of data
+// List<string> AffordableGameNames = Affordable.Select(ag => ag.Title).ToList();
+// AffordableGameNames.ForEach(Console.WriteLine);
+
+List<string> AffordableGameNames = Games.Where(g=>g.Price < 30.00).Select(g=>g.Title).ToList();
+AffordableGameNames.ForEach(Console.WriteLine);
 
 // Ordering / Top 3
+List<VideoGame> MostExpensive = Games.OrderByDescending(g => g.Price).Take(3).ToList();
+MostExpensive.ForEach(Console.WriteLine);
 
 // Logical testing
+bool FreeGames = Games.Any(g => g.Price == 0.00);
+bool FreeGamesTwo = !Games.All(g => g.Price != 0.00);
+Console.WriteLine($"Free games exist: {FreeGames} {FreeGamesTwo}");
+
+
 
 Flavor Vanilla = new("Vanilla", false);
 Flavor Chocolate = new("Chocolate", false);
@@ -51,7 +80,10 @@ IceCreamStore Alexs = new("Alex Miller Goes Nuts",new(){RockyRoad,Spumoni,Peanut
 List<IceCreamStore> StoreDirectory = new(){Alices,Fionas,Carls,Bobs,Alexs};
 
 // nested queries 
-
+List<IceCreamStore> NutFreeStores = StoreDirectory.Where(store => store.AvailableFlavors.All(f => !f.ContainsNuts)).ToList();
+List<IceCreamStore> SellsCookieDough = StoreDirectory.Where(store => store.AvailableFlavors.Any(f => f.Name == "Cookie Dough")).ToList();
+NutFreeStores.ForEach(Console.WriteLine);
+SellsCookieDough.ForEach(Console.WriteLine);
 
 
 
