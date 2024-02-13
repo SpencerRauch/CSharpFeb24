@@ -59,6 +59,14 @@ class BinarySearchTree {
      */
     min(current = this.root) {
         //your code here
+        if (current === null) {
+            return null;
+        }
+
+        while (current.left) {
+            current = current.left;
+        }
+        return current.data;
     }
 
     /**
@@ -71,6 +79,14 @@ class BinarySearchTree {
      */
     minRecursive(current = this.root) {
         //your code
+        if (current === null) {
+            return null;
+        }
+
+        if (current.left === null) {
+            return current.data;
+        }
+        return this.minRecursive(current.left);
     }
 
     /**
@@ -83,6 +99,14 @@ class BinarySearchTree {
      */
     max(current = this.root) {
         //your code here
+        if (current === null) {
+            return null;
+        }
+
+        while (current.right) {
+            current = current.right;
+        }
+        return current.data;
     }
 
     /**
@@ -95,6 +119,14 @@ class BinarySearchTree {
      */
     maxRecursive(current = this.root) {
         //your code here
+        if (current === null) {
+            return null;
+        }
+
+        if (current.right === null) {
+            return current.data;
+        }
+        return this.maxRecursive(current.right);
     }
 
     // Logs this tree horizontally with the root on the left.
