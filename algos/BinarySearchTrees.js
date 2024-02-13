@@ -147,13 +147,13 @@ class BinarySearchTree {
     }
 
     /**
- * Inserts a new node with the given newVal in the right place to preserver
- * the order of this tree.
- * - Time: O(?).
- * - Space: O(?).
- * @param {number} newVal The data to be added to a new node.
- * @returns {BinarySearchTree} This tree.
- */
+     * Inserts a new node with the given newVal in the right place to preserver
+     * the order of this tree.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {number} newVal The data to be added to a new node.
+     * @returns {BinarySearchTree} This tree.
+     */
     insert(newVal) {
         //your code here
     }
