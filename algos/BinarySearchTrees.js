@@ -146,6 +146,34 @@ class BinarySearchTree {
         this.print(node.left, spaceCnt);
     }
 
+    /**
+ * Inserts a new node with the given newVal in the right place to preserver
+ * the order of this tree.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {number} newVal The data to be added to a new node.
+ * @returns {BinarySearchTree} This tree.
+ */
+    insert(newVal) {
+        //your code here
+    }
+
+    /**
+     * Inserts a new node with the given newVal in the right place to preserver
+     * the order of this tree.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {number} newVal The data to be added to a new node.
+     * @param {Node} curr The node that is currently accessed from the tree as
+     *    the tree is being traversed.
+     * @returns {BinarySearchTree} This tree.
+     */
+    insertRecursive(newVal, curr = this.root) {
+        //your code here
+    }
+
+
+
 }
 
 const emptyTree = new BinarySearchTree();
@@ -176,12 +204,12 @@ threeLevelTree.root.left.right = new BSTNode(6);
 threeLevelTree.root.right = new BSTNode(15);
 threeLevelTree.root.right.left = new BSTNode(13);
 
-/* threeLevelTree 
+/* threeLevelTree
         root
         10
       /   \
     5     15
   / \    / \
-2   6  13  
+2   6  13
 */
 // threeLevelTree.print();
